@@ -14,7 +14,7 @@
   - npm trends : https://npmtrends.com/chart.js-vs-d3-vs-recharts
   - chart.js : https://www.chartjs.org/docs/latest/getting-started/integration.html
   - d3 : https://d3js.org/
-  - rechrts : https://recharts.org/en-US/api/AreaChart
+  - recharts : https://recharts.org/en-US/api/AreaChart
   - FW比較記事 : https://zenn.dev/leftletter/articles/cdf3d30b74718c#recharts
 - docker
   - docker image 記事 : https://zenn.dev/jrsyo/articles/e42de409e62f5d#%E9%81%B8%E6%8A%9E%E8%82%A2-3.-ubuntu-%2B-slim-%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8-(%E3%83%90%E3%83%A9%E3%83%B3%E3%82%B9-%E2%97%8E)

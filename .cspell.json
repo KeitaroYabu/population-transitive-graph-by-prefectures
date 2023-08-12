@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "words": ["srcs", "tailwindcss", "devcontainer"],
+  "words": ["srcs", "tailwindcss", "devcontainer", "tsbuildinfo", "RESAS"],
   "flagWords": [],
   "ignorePaths": [
     "**/.github/**",
@@ -26,7 +26,7 @@
     "**/package.json",
     "**/package-lock.json",
     "**/devcontainer.json",
-    "DevLog.md"
+    "tsconfig.tsbuildinfo"
   ],
   "ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
   "ignoreWords": []
