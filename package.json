@@ -11,7 +11,7 @@
     "type-check": "tsc --noEmit",
     "spellCheck": "cspell lint --no-progress --relative --show-context **/*.{js,ts,tsx} .",
     "test": "jest --watch",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage --passWithNoTests"
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
