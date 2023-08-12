@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "languageSettings": [
+    {
+      "languageId": [
+        "html",
+        "css",
+        "node",
+        "npm",
+        "markdown",
+        "json",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ]
+    }
+  ],
+  "words": ["srcs", "tailwindcss", "devcontainer"],
+  "flagWords": [],
+  "ignorePaths": [
+    "**/.github/**",
+    "**/node_modules/**",
+    "**/next/**",
+    "**/package.json",
+    "**/package-lock.json",
+    "**/devcontainer.json",
+    "DevLog.md"
+  ],
+  "ignoreRegExpList": ["[０-９Ａ-Ｚａ-ｚぁ-んァ-ヶ亜-熙纊-黑]+"],
+  "ignoreWords": []
+}
