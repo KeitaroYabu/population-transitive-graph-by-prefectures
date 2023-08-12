@@ -1,0 +1,19 @@
+{
+  "plugins": ["jest"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:jest/recommended",
+    "plugin:jest/style"
+  ],
+  "rules": {
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
+}
