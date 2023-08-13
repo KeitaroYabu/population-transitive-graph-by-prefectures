@@ -2,11 +2,20 @@
 
 コード提出に稼働時間や参考資料の提出を求められていたので、ここに記載する。
 
+## 試験内容
+
+https://yumemi.notion.site/0e9ef27b55704d7882aab55cc86c999d
+https://note.yumemi.co.jp/n/ned7429b59556
+
 ## 稼働時間
 
-8/11 8:05 技術選定/環境構築
-8/12 3:30 components
-8/13 2:20 15:00-
+22:15
+
+| 日付 | 稼働時間 | 作業内容                                   |
+| ---- | -------- | ------------------------------------------ |
+| 8/11 | 8:05     | 技術選定, 環境構築                         |
+| 8/12 | 3:30     | Checkbox                                   |
+| 8/13 | 4:50     | ガイドライン, RadioButton, api/prefectures |
 
 ## 参考資料
 
@@ -26,15 +35,23 @@
   - devcontainer.json props : https://containers.dev/implementors/json_reference/
   - 構築記事 : https://manfredmlange.medium.com/creating-a-dev-container-for-typescript-and-vs-code-part-1-e653bb95c27f github : https://github.com/RimuTec/dev-container-typescript/blob/part-1/.devcontainer/docker-compose.yml
 - Next.js
-  - doc : https://nextjs.org/docs/pages/api-reference/create-next-app
+  - docs : https://nextjs.org/docs/pages/api-reference/create-next-app
   - github : https://github.com/vercel/next.js/blob/canary/examples/with-docker-multi-env/docker/development/Dockerfile
+  - Data Fetching YouTube : https://www.youtube.com/watch?v=-Sj05H2AuW8
+  - MDN Fetch API : https://developer.mozilla.org/ja/docs/Web/API/Fetch_API
 - Jest
+  - docs : https://jestjs.io/ja/docs/expect
   - Next.js docs : https://nextjs.org/docs/pages/building-your-application/optimizing/testing#jest-and-react-testing-library
-  - Jest導入記事 : https://nishinatoshiharu.com/install-jest-in-next/
+  - サバイバルTypeScript : https://typescriptbook.jp/tutorials/jest
+  - 導入記事 : https://nishinatoshiharu.com/install-jest-in-next/
   - eslint-plugin-jest導入記事 : https://zenn.dev/kakkoyakakko/articles/5f9d78a02ff8fb
 - github actions
-  - 記事 : https://qiita.com/shun198/items/14cdba2d8e58ab96cf95#actionscheckoutv3%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%97%E3%81%A6%E3%82%8B%E3%81%AE
+  - 解説記事 : https://qiita.com/shun198/items/14cdba2d8e58ab96cf95#actionscheckoutv3%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%97%E3%81%A6%E3%82%8B%E3%81%AE
   - github docs : https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#available-events
   - checkout v3 : https://github.com/marketplace/actions/checkout
   - setup-node : https://github.com/marketplace/actions/setup-node-js-environment
 - react-icons : https://react-icons.github.io/react-icons
+- components構成
+  - Container/Presentational記事 : https://zenn.dev/buyselltech/articles/9460c75b7cd8d1
+  - Atomic Design記事 : https://tech.leverages.jp/entry/2022/08/31/160743
+  - molecule記事 : https://www.mitsuru-takahashi.net/blog/atomic-molecule/
