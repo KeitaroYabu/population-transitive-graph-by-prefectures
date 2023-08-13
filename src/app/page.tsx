@@ -1,13 +1,15 @@
+import { getPrefectures } from "./api/prefectures";
 import { Checkbox } from "./components/presentational/Checkbox";
 import { RadioButton } from "./components/presentational/RadioButton";
 
-export default function Home() {
+export default async function Home() {
+  const prefectures = await getPrefectures();
   return (
     <main>
       <h1 className="text-3xl">都道府県別総人口推移グラフ</h1>
       <div className="flex flex-row text-center">
         <Checkbox isChecked={true} />
-        北海道
+        {prefectures.result[0].prefName}
       </div>
       <Checkbox isChecked={false} />
       <div className="flex flex-row text-center">
