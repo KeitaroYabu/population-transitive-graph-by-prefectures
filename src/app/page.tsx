@@ -1,4 +1,4 @@
-import { Checkbox } from "./components/checkbox";
+import { Checkbox } from "./components/presentational/Checkbox";
 
 export default function Home() {
   return (
