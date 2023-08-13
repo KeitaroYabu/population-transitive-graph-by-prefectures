@@ -6,7 +6,7 @@
 
 8/11 8:05 技術選定/環境構築
 8/12 3:30 components
-8/13 2:00 ガイドライン
+8/13 2:20 15:00-
 
 ## 参考資料
 
@@ -37,3 +37,4 @@
   - github docs : https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#available-events
   - checkout v3 : https://github.com/marketplace/actions/checkout
   - setup-node : https://github.com/marketplace/actions/setup-node-js-environment
+- react-icons : https://react-icons.github.io/react-icons
