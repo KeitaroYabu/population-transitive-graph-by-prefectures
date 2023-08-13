@@ -1,4 +1,5 @@
 import { Checkbox } from "./components/presentational/Checkbox";
+import { RadioButton } from "./components/presentational/RadioButton";
 
 export default function Home() {
   return (
@@ -9,6 +10,11 @@ export default function Home() {
         北海道
       </div>
       <Checkbox isChecked={false} />
+      <div className="flex flex-row text-center">
+        <RadioButton isChecked />
+        総人口
+      </div>
+      <RadioButton isChecked={false} />
     </main>
   );
 }
