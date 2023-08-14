@@ -9,13 +9,14 @@ https://note.yumemi.co.jp/n/ned7429b59556
 
 ## 稼働時間
 
-10:10
+13:45
 
 | 日付 | 稼働時間 | 作業内容                                   |
 | ---- | -------- | ------------------------------------------ |
 | 8/11 | 8:05     | 技術選定, 環境構築                         |
 | 8/12 | 3:30     | Checkbox                                   |
 | 8/13 | 6:35     | ガイドライン, RadioButton, api/prefectures |
+| 8/14 | 1:35     | 都道府県選択UI                             |
 
 ## 参考資料
 
@@ -39,12 +40,14 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - github : https://github.com/vercel/next.js/blob/canary/examples/with-docker-multi-env/docker/development/Dockerfile
   - Data Fetching YouTube : https://www.youtube.com/watch?v=-Sj05H2AuW8
   - MDN Fetch API : https://developer.mozilla.org/ja/docs/Web/API/Fetch_API
+  - useContext : https://reffect.co.jp/react/next-js-13/#context
 - Jest
   - docs : https://jestjs.io/ja/docs/expect
   - Next.js docs : https://nextjs.org/docs/pages/building-your-application/optimizing/testing#jest-and-react-testing-library
   - サバイバルTypeScript : https://typescriptbook.jp/tutorials/jest
   - 導入記事 : https://nishinatoshiharu.com/install-jest-in-next/
   - eslint-plugin-jest導入記事 : https://zenn.dev/kakkoyakakko/articles/5f9d78a02ff8fb
+  - 解説記事 : https://zenn.dev/tkdn/books/react-testing-patterns/viewer/about-this-book
 - github actions
   - 解説記事 : https://qiita.com/shun198/items/14cdba2d8e58ab96cf95#actionscheckoutv3%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%97%E3%81%A6%E3%82%8B%E3%81%AE
   - github docs : https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#available-events
