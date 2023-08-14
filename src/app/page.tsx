@@ -7,11 +7,19 @@ export default async function Home() {
   return (
     <main>
       <h1 className="text-3xl">都道府県別総人口推移グラフ</h1>
-      <div className="flex flex-row text-center">
-        <Checkbox isChecked={true} />
-        {prefectures.result[0].prefName}
+      <div className="flex flex-row flex-wrap">
+        {prefectures.result.map((prefecture) => {
+          return (
+            <div
+              key={prefecture.prefCode}
+              className="flex w-24 flex-row text-center"
+            >
+              <Checkbox isChecked={true} />
+              {prefecture.prefName}
+            </div>
+          );
+        })}
       </div>
-      <Checkbox isChecked={false} />
       <div className="flex flex-row text-center">
         <RadioButton isChecked />
         総人口
