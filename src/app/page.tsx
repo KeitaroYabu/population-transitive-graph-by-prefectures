@@ -1,7 +1,8 @@
 import { getPopulation } from "./api/population";
 import { getPrefectures } from "./api/prefectures";
+import { PopulationRadioButton } from "./components/container/PopulationRadioButton";
 import { PrefectureCheckbox } from "./components/container/PrefectureCheckbox";
-import { RadioButton } from "./components/presentational/RadioButton";
+import { PopulationSection } from "./contexts/populationContext";
 
 export default async function Home() {
   const prefectures = await getPrefectures();
@@ -9,6 +10,12 @@ export default async function Home() {
   return (
     <main>
       <h1 className="text-3xl">都道府県別総人口推移グラフ</h1>
+      <div className="flex flex-row gap-5">
+        <PopulationRadioButton populationSection="total" />
+        <PopulationRadioButton populationSection="young" />
+        <PopulationRadioButton populationSection="working" />
+        <PopulationRadioButton populationSection="old" />
+      </div>
       <div className="flex flex-row flex-wrap">
         {prefectures.result.map((prefecture) => {
           return (
@@ -16,11 +23,7 @@ export default async function Home() {
           );
         })}
       </div>
-      <div className="flex flex-row text-center">
-        <RadioButton isChecked />
-        {population.result.boundaryYear}
-      </div>
-      <RadioButton isChecked={false} />
+      {population.result.boundaryYear}
     </main>
   );
 }
