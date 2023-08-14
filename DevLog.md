@@ -9,13 +9,13 @@ https://note.yumemi.co.jp/n/ned7429b59556
 
 ## 稼働時間
 
-22:15
+10:10
 
 | 日付 | 稼働時間 | 作業内容                                   |
 | ---- | -------- | ------------------------------------------ |
 | 8/11 | 8:05     | 技術選定, 環境構築                         |
 | 8/12 | 3:30     | Checkbox                                   |
-| 8/13 | 4:50     | ガイドライン, RadioButton, api/prefectures |
+| 8/13 | 6:35     | ガイドライン, RadioButton, api/prefectures |
 
 ## 参考資料
 
@@ -55,3 +55,5 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - Container/Presentational記事 : https://zenn.dev/buyselltech/articles/9460c75b7cd8d1
   - Atomic Design記事 : https://tech.leverages.jp/entry/2022/08/31/160743
   - molecule記事 : https://www.mitsuru-takahashi.net/blog/atomic-molecule/
+- 環境変数
+  - best practice記事 : https://zenn.dev/dove/articles/5fd7926e7da949
