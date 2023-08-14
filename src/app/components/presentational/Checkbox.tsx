@@ -3,16 +3,15 @@ import { MdCheckBoxOutlineBlank, MdCheckBox } from "react-icons/md";
 
 type Props = ComponentPropsWithoutRef<"button"> & {
   isChecked: boolean;
-  size: number;
 };
 
-export const Checkbox = ({ isChecked, size, ...props }: Props) => {
+export const Checkbox = ({ isChecked, ...props }: Props) => {
   return (
     <button {...props}>
       {isChecked ? (
-        <MdCheckBox size={size} />
+        <MdCheckBox size={20} />
       ) : (
-        <MdCheckBoxOutlineBlank size={size} />
+        <MdCheckBoxOutlineBlank size={20} />
       )}
     </button>
   );
