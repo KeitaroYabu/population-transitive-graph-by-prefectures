@@ -1,8 +1,10 @@
 import { appConfig } from "../config";
 
+export type Prefecture = { prefCode: number; prefName: string };
+
 type PrefecturesResponse = {
   message: null;
-  result: { prefCode: number; prefName: string }[];
+  result: Prefecture[];
 };
 
 export const getPrefectures: () => Promise<PrefecturesResponse> = async () => {

@@ -1,5 +1,5 @@
 import { getPrefectures } from "./api/prefectures";
-import { Checkbox } from "./components/presentational/Checkbox";
+import { PrefectureCheckbox } from "./components/container/PrefectureCheckbox";
 import { RadioButton } from "./components/presentational/RadioButton";
 
 export default async function Home() {
@@ -10,13 +10,7 @@ export default async function Home() {
       <div className="flex flex-row flex-wrap">
         {prefectures.result.map((prefecture) => {
           return (
-            <div
-              key={prefecture.prefCode}
-              className="flex w-24 flex-row text-center"
-            >
-              <Checkbox isChecked={true} />
-              {prefecture.prefName}
-            </div>
+            <PrefectureCheckbox key={prefecture.prefCode} {...prefecture} />
           );
         })}
       </div>
