@@ -3,16 +3,15 @@ import { MdRadioButtonChecked, MdRadioButtonUnchecked } from "react-icons/md";
 
 type Props = ComponentPropsWithoutRef<"button"> & {
   isChecked: boolean;
-  size: number;
 };
 
-export const RadioButton = ({ isChecked, size, ...props }: Props) => {
+export const RadioButton = ({ isChecked, ...props }: Props) => {
   return (
     <button {...props}>
       {isChecked ? (
-        <MdRadioButtonChecked size={size} />
+        <MdRadioButtonChecked size={20} />
       ) : (
-        <MdRadioButtonUnchecked size={size} />
+        <MdRadioButtonUnchecked size={20} />
       )}
     </button>
   );
