@@ -11,6 +11,7 @@ export const PrefectureCheckbox = ({ prefCode, prefName }: Prefecture) => {
     <div className="flex w-24 flex-row text-center">
       <Checkbox
         isChecked={isSelectedPrefectures}
+        size={20}
         onClick={updateSelectedPrefectures}
       />
       {prefName}
