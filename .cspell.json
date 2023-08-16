@@ -17,7 +17,14 @@
       ]
     }
   ],
-  "words": ["srcs", "tailwindcss", "devcontainer", "tsbuildinfo", "RESAS"],
+  "words": [
+    "srcs",
+    "tailwindcss",
+    "devcontainer",
+    "tsbuildinfo",
+    "RESAS",
+    "chartjs"
+  ],
   "flagWords": [],
   "ignorePaths": [
     "**/.github/**",
