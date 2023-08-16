@@ -9,7 +9,6 @@ type PopulationResponse = {
       data: {
         year: number;
         value: number;
-        rate?: number;
       }[];
     }[];
   };

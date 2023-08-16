@@ -9,12 +9,16 @@ https://note.yumemi.co.jp/n/ned7429b59556
 
 ## 稼働時間
 
+15:00
+
 | 日付 | 稼働時間 | 作業内容                                       |
 | ---- | -------- | ---------------------------------------------- |
 | 8/11 | 8:05     | 技術選定, 環境構築                             |
 | 8/12 | 3:30     | Checkbox                                       |
 | 8/13 | 6:35     | ガイドライン, RadioButton, api/prefectures     |
-| 8/14 | 5:50     | 都道府県選択UI, api/population, 人口区分選択UI |
+| 8/14 | 6:10     | 都道府県選択UI, api/population, 人口区分選択UI |
+| 8/15 | 5:00     | グラフ                                         |
+| 8/16 |          |                                                |
 
 ## 参考資料
 
@@ -22,6 +26,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
 - chart FW
   - npm trends : https://npmtrends.com/chart.js-vs-d3-vs-recharts
   - chart.js : https://www.chartjs.org/docs/latest/getting-started/integration.html
+  - react-chartjs-2 : https://react-chartjs-2.js.org/
   - d3 : https://d3js.org/
   - recharts : https://recharts.org/en-US/api/AreaChart
   - FW比較記事 : https://zenn.dev/leftletter/articles/cdf3d30b74718c#recharts
