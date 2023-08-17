@@ -20,10 +20,10 @@ export default async function Home() {
     <main>
       <h1 className="text-3xl">都道府県別総人口推移グラフ</h1>
       <div className="flex flex-row gap-5">
-        <PopulationRadioButton populationSection="total" />
-        <PopulationRadioButton populationSection="young" />
-        <PopulationRadioButton populationSection="working" />
-        <PopulationRadioButton populationSection="old" />
+        <PopulationRadioButton section="total" />
+        <PopulationRadioButton section="young" />
+        <PopulationRadioButton section="working" />
+        <PopulationRadioButton section="old" />
       </div>
       <div className="flex flex-row flex-wrap">
         {prefectures.result.map((prefecture) => {

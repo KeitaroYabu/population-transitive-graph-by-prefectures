@@ -1,6 +1,6 @@
 import { appConfig } from "../config";
 
-type PopulationResponse = {
+export type PopulationResponse = {
   message: null;
   result: {
     boundaryYear: number;

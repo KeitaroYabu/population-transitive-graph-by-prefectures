@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import { ReactNode } from "react";
-import { PopulationContextProvider } from "./contexts/populationContext";
-import { PrefecturesContextProvider } from "./contexts/prefecturesContext";
+import { PopulationSectionContextProvider } from "./contexts/populationSectionContext";
+import { PopulationsContextProvider } from "./contexts/populationsContext";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"] });
 
@@ -15,11 +15,11 @@ export default function RootLayout(props: { children: ReactNode }) {
   return (
     <html lang="ja">
       <body className={notoSansJP.className}>
-        <PrefecturesContextProvider>
-          <PopulationContextProvider>
+        <PopulationsContextProvider>
+          <PopulationSectionContextProvider>
             {props.children}
-          </PopulationContextProvider>
-        </PrefecturesContextProvider>
+          </PopulationSectionContextProvider>
+        </PopulationsContextProvider>
       </body>
     </html>
   );
