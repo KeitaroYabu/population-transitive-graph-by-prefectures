@@ -2,29 +2,23 @@
 
 import {
   PopulationSection,
-  usePopulationContext,
-} from "../../contexts/populationContext";
+  populationLabel,
+  usePopulationSectionContext,
+} from "../../contexts/populationSectionContext";
 import { RadioButton } from "../presentational/RadioButton";
 
-const populationLabel: Record<PopulationSection, string> = {
-  total: "総人口",
-  young: "年少人口",
-  working: "生産年齢人口",
-  old: "老年人口",
-};
-
 export const PopulationRadioButton = (props: {
-  populationSection: PopulationSection;
+  section: PopulationSection;
 }) => {
-  const [selectedPopulation, setSelectedPopulation] = usePopulationContext();
+  const [selectedSection, setSelectedSection] = usePopulationSectionContext();
   return (
     <div className="flex flex-row text-center">
       <RadioButton
-        isChecked={props.populationSection === selectedPopulation}
+        isChecked={props.section === selectedSection}
         size={22}
-        onClick={() => setSelectedPopulation(props.populationSection)}
+        onClick={() => setSelectedSection(props.section)}
       />
-      {populationLabel[props.populationSection]}
+      {populationLabel[props.section]}
     </div>
   );
 };
