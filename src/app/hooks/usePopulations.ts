@@ -1,11 +1,12 @@
 import { PopulationResponse, getPopulation } from "../api/population";
+import { Prefecture } from "../api/prefectures";
 import {
   PopulationSection,
   populationLabel,
 } from "../contexts/populationSectionContext";
 import { usePopulationsContext } from "../contexts/populationsContext";
 
-const populationDataFormatter = (
+const formatPopulationData = (
   data: PopulationResponse,
   section: PopulationSection,
 ) => {
@@ -14,7 +15,7 @@ const populationDataFormatter = (
     ?.data.map(({ value }) => value);
 };
 
-export const usePrefectures = (prefCode: number) => {
+export const usePopulations = (prefCode: number) => {
   const [selectedPopulations, setSelectedPopulations] = usePopulationsContext();
 
   const isSelectedPrefectures = selectedPopulations.some(
@@ -35,10 +36,10 @@ export const usePrefectures = (prefCode: number) => {
       {
         prefCode,
         data: {
-          total: populationDataFormatter(newPopulation, "total"),
-          young: populationDataFormatter(newPopulation, "young"),
-          working: populationDataFormatter(newPopulation, "working"),
-          old: populationDataFormatter(newPopulation, "old"),
+          total: formatPopulationData(newPopulation, "total"),
+          young: formatPopulationData(newPopulation, "young"),
+          working: formatPopulationData(newPopulation, "working"),
+          old: formatPopulationData(newPopulation, "old"),
         },
       },
     ]);

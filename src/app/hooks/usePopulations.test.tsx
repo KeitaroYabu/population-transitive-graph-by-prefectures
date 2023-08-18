@@ -1,7 +1,7 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
 import { ReactNode } from "react";
 import { PopulationsContextProvider } from "../contexts/populationsContext";
-import { usePrefectures } from "./usePopulations";
+import { usePopulations } from "./usePopulations";
 
 const wrapper = (props: { children: ReactNode }) => {
   return (
@@ -42,7 +42,7 @@ afterAll(() => {
 
 // prefCodeが1の場合
 const usePrefecturesTest = () => {
-  const { isSelectedPrefectures, updatePopulations } = usePrefectures(1);
+  const { isSelectedPrefectures, updatePopulations } = usePopulations(1);
   return { isSelectedPrefectures, updatePopulations };
 };
 

@@ -32,7 +32,7 @@ export default async function Home() {
           );
         })}
       </div>
-      <PopulationLineGraph data={data} />
+      <PopulationLineGraph prefectures={prefectures.result} />
     </main>
   );
 }
