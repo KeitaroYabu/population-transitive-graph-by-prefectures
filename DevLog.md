@@ -15,9 +15,10 @@ https://note.yumemi.co.jp/n/ned7429b59556
 | 8/12 | 3:30     | Checkbox                                       |
 | 8/13 | 6:35     | ガイドライン, RadioButton, api/prefectures     |
 | 8/14 | 6:10     | 都道府県選択UI, api/population, 人口区分選択UI |
-| 8/15 | 5:00     | グラフ                                         |
-| 8/16 | 4:00     | 内部ロジックの修正                             |
-| 8/17 | 1:45     | テストの修正                                   |
+| 8/15 | 5:00     | react-chartjs-2の導入                          |
+| 8/16 | 4:00     | contextsの修正                                 |
+| 8/17 | 1:55     | テストの修正                                   |
+| 8/18 | 2:30     | グラフ表示UI                                   |
 
 ## 参考資料
 
@@ -26,6 +27,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - npm trends : https://npmtrends.com/chart.js-vs-d3-vs-recharts
   - chart.js : https://www.chartjs.org/docs/latest/getting-started/integration.html
   - react-chartjs-2 : https://react-chartjs-2.js.org/
+    - sandbox : https://codesandbox.io/s/github/reactchartjs/react-chartjs-2/tree/master/sandboxes/line/default?from-embed
   - d3 : https://d3js.org/
   - recharts : https://recharts.org/en-US/api/AreaChart
   - FW比較記事 : https://zenn.dev/leftletter/articles/cdf3d30b74718c#recharts
@@ -50,6 +52,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - 導入記事 : https://nishinatoshiharu.com/install-jest-in-next/
   - eslint-plugin-jest導入記事 : https://zenn.dev/kakkoyakakko/articles/5f9d78a02ff8fb
   - 解説記事 : https://zenn.dev/tkdn/books/react-testing-patterns/viewer/about-this-book
+- React Testing Library : https://testing-library.com/docs/dom-testing-library/api-async/#waitfor
 - github actions
   - 解説記事 : https://qiita.com/shun198/items/14cdba2d8e58ab96cf95#actionscheckoutv3%E3%81%A3%E3%81%A6%E4%BD%95%E3%81%97%E3%81%A6%E3%82%8B%E3%81%AE
   - github docs : https://docs.github.com/ja/actions/using-workflows/events-that-trigger-workflows#available-events
