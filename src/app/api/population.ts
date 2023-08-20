@@ -1,4 +1,4 @@
-import { appConfig } from "../config";
+import { appConfig } from "../utils/config";
 
 export type PopulationResponse = {
   message: null;

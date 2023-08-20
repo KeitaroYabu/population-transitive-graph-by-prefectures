@@ -1,5 +1,4 @@
 import { PopulationResponse, getPopulation } from "../api/population";
-import { Prefecture } from "../api/prefectures";
 import {
   PopulationSection,
   populationLabel,

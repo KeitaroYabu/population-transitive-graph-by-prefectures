@@ -1,4 +1,4 @@
-import { appConfig } from "../config";
+import { appConfig } from "../utils/config";
 
 export type Prefecture = { prefCode: number; prefName: string };
 
