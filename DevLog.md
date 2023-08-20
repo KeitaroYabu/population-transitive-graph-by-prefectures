@@ -9,7 +9,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
 
 ## 稼働時間
 
-10:25
+14:20
 
 | 日付 | 稼働時間 | 作業内容                                       |
 | ---- | -------- | ---------------------------------------------- |
@@ -22,7 +22,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
 | 8/17 | 1:55     | テストの修正                                   |
 | 8/18 | 2:30     | グラフ表示UI                                   |
 | 8/19 | 6:50     | デプロイ, UIの修正                             |
-| 8/20 |          |                                                |
+| 8/20 | 2:40     | UIの修正                                       |
 
 ## 参考資料
 
@@ -69,3 +69,4 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - molecule記事 : https://www.mitsuru-takahashi.net/blog/atomic-molecule/
 - 環境変数
   - best practice記事 : https://zenn.dev/dove/articles/5fd7926e7da949
+- tailwindcss : https://tailwindcss.com/docs/theme
