@@ -1,5 +1,6 @@
 "use client";
 
+import { colors } from "src/app/utils/theme";
 import { Prefecture } from "../../api/prefectures";
 import { usePopulations } from "../../hooks/usePopulations";
 import { Checkbox } from "../presentational/Checkbox";
@@ -10,7 +11,7 @@ export const PrefectureCheckbox = ({ prefCode, prefName }: Prefecture) => {
     <div className="flex w-24 flex-row text-center">
       <Checkbox
         isChecked={isSelectedPrefectures}
-        size={20}
+        iconProps={{ size: 20, color: colors.red }}
         onClick={updatePopulations}
       />
       {prefName}

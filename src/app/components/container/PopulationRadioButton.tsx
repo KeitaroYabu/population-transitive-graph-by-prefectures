@@ -1,5 +1,6 @@
 "use client";
 
+import { colors } from "src/app/utils/theme";
 import {
   PopulationSection,
   populationLabel,
@@ -15,7 +16,7 @@ export const PopulationRadioButton = (props: {
     <div className="flex flex-row text-center">
       <RadioButton
         isChecked={props.section === selectedSection}
-        size={22}
+        iconProps={{ size: 22, color: colors.blue }}
         onClick={() => setSelectedSection(props.section)}
       />
       {populationLabel[props.section]}

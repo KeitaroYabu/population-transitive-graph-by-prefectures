@@ -8,13 +8,16 @@ import {
   Legend,
   LineElement,
   LinearScale,
-  Point,
   PointElement,
   Tooltip,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { colors } from "src/app/utils/theme";
 import { Prefecture } from "../../api/prefectures";
-import { usePopulationSectionContext } from "../../contexts/populationSectionContext";
+import {
+  populationLabel,
+  usePopulationSectionContext,
+} from "../../contexts/populationSectionContext";
 import { usePopulationsContext } from "../../contexts/populationsContext";
 
 Chart.register(
@@ -26,6 +29,8 @@ Chart.register(
   Legend,
   Colors,
 );
+
+Chart.defaults.color = colors.black;
 
 export const PopulationLineGraph = (props: { prefectures: Prefecture[] }) => {
   const [selectedPopulations] = usePopulationsContext();
@@ -56,9 +61,51 @@ export const PopulationLineGraph = (props: { prefectures: Prefecture[] }) => {
     }),
   };
   return (
-    <Line
-      data={data}
-      options={{ plugins: { colors: { forceOverride: true } } }}
-    />
+    <>
+      {selectedPopulations.length === 0 ? (
+        <p>都道府県を選択してください。</p>
+      ) : (
+        <Line
+          data={data}
+          options={{
+            interaction: {
+              intersect: false,
+              mode: "index",
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: ["西暦[年]", "(実績値 : 2020年まで)"],
+                  font: { size: 14, lineHeight: "20px" },
+                  align: "end",
+                },
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: populationLabel[selectedSection] + "[万人]",
+                  font: { size: 14 },
+                  align: "end",
+                },
+                ticks: { callback: (tick) => Number(tick) / 10000 },
+              },
+            },
+            plugins: {
+              colors: { forceOverride: true },
+              legend: { labels: { font: { size: 14 } } },
+              tooltip: {
+                callbacks: {
+                  title: (items) =>
+                    Number(items[0].label) <= 2020
+                      ? items[0].label + "年"
+                      : items[0].label + "年 (推計値)",
+                },
+              },
+            },
+          }}
+        />
+      )}
+    </>
   );
 };
