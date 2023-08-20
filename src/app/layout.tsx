@@ -4,7 +4,6 @@ import { Noto_Sans_JP } from "next/font/google";
 import { ReactNode } from "react";
 import { PopulationSectionContextProvider } from "./contexts/populationSectionContext";
 import { PopulationsContextProvider } from "./contexts/populationsContext";
-import { colors } from "./utils/theme";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500"] });
 
