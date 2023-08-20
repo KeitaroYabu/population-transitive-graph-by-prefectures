@@ -19,6 +19,7 @@ import {
   usePopulationSectionContext,
 } from "../../contexts/populationSectionContext";
 import { usePopulationsContext } from "../../contexts/populationsContext";
+import { ResponsiveWrap } from "../presentational/ResponsiveWrap";
 
 Chart.register(
   CategoryScale,
@@ -63,7 +64,9 @@ export const PopulationLineGraph = (props: { prefectures: Prefecture[] }) => {
   return (
     <>
       {selectedPopulations.length === 0 ? (
-        <p>都道府県を選択してください。</p>
+        <ResponsiveWrap>
+          <p>都道府県を選択してください。</p>
+        </ResponsiveWrap>
       ) : (
         <Line
           data={data}
