@@ -1,6 +1,6 @@
 # 開発記録
 
-コード提出に稼働時間や参考資料の提出を求められていたので、ここに記載する。
+稼働時間や参考資料等はここに記載する。
 
 ## 試験内容
 
@@ -9,7 +9,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
 
 ## 稼働時間
 
-14:20
+総稼働時間 : 51:50
 
 | 日付 | 稼働時間 | 作業内容                                       |
 | ---- | -------- | ---------------------------------------------- |
@@ -22,7 +22,43 @@ https://note.yumemi.co.jp/n/ned7429b59556
 | 8/17 | 1:55     | テストの修正                                   |
 | 8/18 | 2:30     | グラフ表示UI                                   |
 | 8/19 | 6:50     | デプロイ, UIの修正                             |
-| 8/20 | 2:40     | UIの修正                                       |
+| 8/20 | 7:15     | UIの修正, responsive design, docsの整理        |
+
+## 技術選定
+
+- Next.js : 仕様的にWebサイトの側面が強いのでSEOを意識。
+- Tailwind CSS : CSSベースなのでApp Routerでも動作する。create-next-appのおかげで導入が簡単。
+- Jest / React Testing Library : なんとなく。記事でよく目にしていたから。
+- Docker : ローカルにNode環境がないから。
+  - devcontainer : 環境構築が簡単だから。
+- chart.js / react-chartjs-2 : recharts内部のinheritsでErrorが発生したため、代替として採用。d3は多機能すぎたので却下した。react-chartjs-2の更新が止まっていることが懸念点。
+- vercel : Next.jsと親和性が高いため。
+
+## 振り返り
+
+- docker / devcontainer
+  - dockerは初めての試みだった。
+  - docker環境の構築に時間をかけてられないので、動くことを優先した。
+  - docker imageはalpineが仕様が一部異なるようなので、slimを採用。
+  - devcontainerを採用したことにより、エディターがVS Codeに制限される状態になってしまった。
+  - docker環境でgitのアカウント認証が通らなかったので、ローカルに環境変数入れてゴリ押ししてしまった。
+- App
+  - client componentsを小さくするように努めた。
+  - 状態管理がclient componentsに限られる一方で状態管理する項目が少ないので、useContextを採用した。
+  - Tailwind CSSからthemeを取り出す方法がわからなかったので、utils/theme.tsで対応。
+  - rechartsは修正によるタイムロスを吟味して採用取り消し。原因は究明済み。
+  - 環境変数の扱いには注意した。
+- Dir
+  - ディレクトリごとの責務はきちんと分けられているはず。
+  - ディレクトリ構成については検討の余地がありそう。今回はpageが少ないため問題ないと判断。
+    - container componentsはdomainに依存するため、segment配下に置く。
+    - componentsをUI/client/serverに分け、UIはdomain非依存のためapp配下、client/serverはdomain依存のためsegment配下。
+    - hooksもdomain依存のものはsegment配下に置く。
+- 開発体制
+  - テスト戦略 : 静的テストは徹底したが、複雑な関数が少ないため単体テスト以上はあまりしていない。
+  - commit messageに一貫性がない。
+  - 機能、UI/UX、コードの最適化の順で優先順位を立てた。
+  - デプロイ後は時間のかかりそうなタスクはIssueを作って後回しにした。
 
 ## 参考資料
 
@@ -63,7 +99,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
   - checkout v3 : https://github.com/marketplace/actions/checkout
   - setup-node : https://github.com/marketplace/actions/setup-node-js-environment
 - react-icons : https://react-icons.github.io/react-icons
-- components構成
+- ディレクトリ構成
   - Container/Presentational記事 : https://zenn.dev/buyselltech/articles/9460c75b7cd8d1
   - Atomic Design記事 : https://tech.leverages.jp/entry/2022/08/31/160743
   - molecule記事 : https://www.mitsuru-takahashi.net/blog/atomic-molecule/
