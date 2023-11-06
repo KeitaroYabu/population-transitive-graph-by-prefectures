@@ -24,6 +24,7 @@ https://note.yumemi.co.jp/n/ned7429b59556
 | 8/19 | 6:50     | デプロイ, UIの修正                             |
 | 8/20 | 7:15     | UIの修正, responsive design, docsの整理        |
 | 8/21 | 0:20     | 手直し                                         |
+|11/7||openしていたIssueを未計画としてclose|
 
 ## 技術選定
 
